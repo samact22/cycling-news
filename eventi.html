@@ -1,44 +1,45 @@
 <!DOCTYPE html>
-
 <html lang="it">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Eventi - Cycling News</title>
-<link href="stile.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risultati - Cycling News</title>
+<link rel="stylesheet" href="stile.css">
 </head>
 <body>
-<img alt="eventi.jpg" src="img/eventi.jpg" style="width:100%;max-height:400px;object-fit:cover;"/>
-<img alt="Immagine ciclismo" src="img/eventi.png" style="width:100%; height:auto;"/>
 <header class="hero">
-<h1>Eventi in programma</h1>
-<p>Prossime gare e appuntamenti da non perdere</p>
+<h1>Risultati Recenti</h1>
+<p>Le ultime gare e i vincitori del World Tour</p>
 </header>
+
 <nav>
-<ul class="menu">
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="notizie.html">Notizie</a></li>
 <li><a href="classifiche.html">Classifiche</a></li>
+<li><a href="risultati.html" class="active">Risultati</a></li>
+<li><a href="calendario.html">Calendario</a></li>
 <li><a href="squadre.html">Squadre</a></li>
-<li><a href="eventi.html">Eventi</a></li>
+<li><a href="about.html">Chi siamo</a></li>
 <li><a href="contatti.html">Contatti</a></li>
 </ul>
 </nav>
 
 <main>
-<h2>Eventi in programma</h2>
-<p>Il calendario UCI World Tour 2025 offre un mix entusiasmante di gare a tappe e classiche. Tra gli appuntamenti più attesi:</p>
-<ul>
-<li><strong>Milano-Sanremo</strong> - 15 marzo</li>
-<li><strong>Parigi-Roubaix</strong> - 13 aprile</li>
-<li><strong>Giro d’Italia</strong> - 3-25 maggio</li>
-<li><strong>Tour de France</strong> - 5-27 luglio</li>
-<li><strong>Vuelta a España</strong> - 23 agosto - 14 settembre</li>
-</ul>
+<section>
+<h2>Ultime Gare</h2>
+<table>
+<tr><th>Gara</th><th>Vincitore</th><th>Squadra</th><th>Data</th></tr>
+<tr><td>Giro d’Italia – Tappa 16</td><td>Isaac Del Toro</td><td>UAE Team Emirates</td><td>20 Maggio 2025</td></tr>
+<tr><td>Parigi-Roubaix</td><td>Mads Pedersen</td><td>Lidl-Trek</td><td>13 Aprile 2025</td></tr>
+<tr><td>Milano-Sanremo</td><td>Olav Kooij</td><td>Visma | Lease a Bike</td><td>15 Marzo 2025</td></tr>
+</table>
+</section>
 </main>
 
 <footer>
-<p>© 2025 Cycling News - Tutti i diritti riservati</p>
+<p>© <span id="anno"></span> Cycling News</p>
+<script>document.getElementById('anno').textContent = new Date().getFullYear();</script>
 </footer>
 </body>
 </html>
